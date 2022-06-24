@@ -1,0 +1,77 @@
+.modal_container {
+    background-color: var(--white);
+
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+
+    border-radius: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 2rem 1rem 2rem;
+}
+
+.image {
+}
+
+.date {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: var(--gray);
+}
+
+.city {
+    font-size: 2rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.temp_value {
+    font-size: 2rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1.5rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    background-color: var(--white-middle);
+    color: var(--blue);
+    padding: 1rem;
+    letter-spacing: 0.08rem;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .image {
+        height: 8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .button {
+        width: 20%;
+    }
+}
