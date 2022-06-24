@@ -1,2 +1,2 @@
-export const URL_Geocoding = "http://api.openweathermap.org/geo/1.0/direct?appid=41efe6c3c31d5ae1f7aec6261fd98963"
+export const URL_Geocoding = "https://api.openweathermap.org/geo/1.0/direct?appid=41efe6c3c31d5ae1f7aec6261fd98963"
 export const API_URL = "https://api.openweathermap.org/data/2.5/onecall?appid=41efe6c3c31d5ae1f7aec6261fd98963&units=metric&lang=ru"
