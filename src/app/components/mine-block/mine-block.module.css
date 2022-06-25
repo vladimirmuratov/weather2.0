@@ -45,8 +45,35 @@
     /*background: #555;*/
 }
 
+.cities_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 60%;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.cities_block__remove_button {
+    display: flex;
+    align-items: center;
+}
+
+.cities_container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+}
+
 @media (max-width: 426px) {
     .block {
+        width: 100%;
+    }
+
+    .cities_block {
         width: 100%;
     }
 }

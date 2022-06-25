@@ -1,7 +1,7 @@
 import React from "react";
 import ReactModal from "react-modal";
 import styles from "./modal.module.css";
-import {IData} from "../../../types";
+import {IData} from "../../types";
 
 interface Props {
     isOpen: boolean,

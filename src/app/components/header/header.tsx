@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
-import logo from "../../../images/logo.png";
+import logo from "../../images/logo.png";
 
 export const Header = (): JSX.Element => (
     <header className={styles.header_container}>

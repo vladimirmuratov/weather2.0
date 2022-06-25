@@ -3,11 +3,12 @@ import styles from "./card-weather.module.css";
 import {Modal} from "../modal/modal";
 
 interface Props {
+    country: string,
     city: string,
     data: any,
 }
 
-export const CardWeather: React.FC<Props> = ({city, data}): JSX.Element => {
+export const CardWeather: React.FC<Props> = ({country, city, data}): JSX.Element => {
     const [showModal, setModal] = useState(false)
     const icon = data.weather[0].icon + '@2x.png'
     const today = new Date().toLocaleDateString() === new Date(data.dt * 1000).toLocaleDateString()
@@ -38,7 +39,7 @@ export const CardWeather: React.FC<Props> = ({city, data}): JSX.Element => {
                     <span>{date.toLocaleDateString()}</span>
                 </div>
                 <div>
-                    <h1 className={styles.city}>{city}</h1>
+                    <h1 className={styles.city}>{city}, {country}</h1>
                 </div>
                 <p className={styles.description}>{data.weather[0].description}</p>
                 <p className={styles.temp_value}>{symbol + String(temperature)}&#8451;</p>
