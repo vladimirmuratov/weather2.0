@@ -8,6 +8,7 @@ interface Props {
 }
 
 export const Form: React.FC<Props> = ({city, onChange, onSubmit}): JSX.Element => (
+
     <form className={styles.form_block} onSubmit={onSubmit}>
         <input
             className={styles.form_input}

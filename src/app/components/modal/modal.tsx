@@ -2,6 +2,7 @@ import React from "react";
 import ReactModal from "react-modal";
 import styles from "./modal.module.css";
 import {IData} from "../../types";
+import {dayOfWeek} from "../../../constants";
 
 interface Props {
     isOpen: boolean,
@@ -15,23 +16,13 @@ export const Modal: React.FC<Props> = ({isOpen, onToggleModal, data, city}): JSX
     const today = new Date().toLocaleDateString() === new Date(dt * 1000).toLocaleDateString()
     const date = new Date(dt * 1000)
 
-    const symbol = Number(data.temp.day) > 0 && '+'
+    const symbol = Number(data.temp.day) > 0 ? '+' : ''
     const temperature = Math.round(Number(temp.day))
 
     const sunriseDate = new Date(sunrise * 1000).getHours() + 'ч.' + new Date(sunrise * 1000).getMinutes() + 'мин.'
     const sunsetDate = new Date(sunset * 1000).getHours() + 'ч.' + new Date(sunset * 1000).getMinutes() + 'мин.'
 
     const icon = data.weather[0].icon + '@2x.png'
-
-    const dayOfWeek = [
-        'Воскресенье',
-        'Понедельник',
-        'Вторник',
-        'Среда',
-        'Четверг',
-        'Пятница',
-        'Суббота'
-    ]
 
     return (
         <ReactModal

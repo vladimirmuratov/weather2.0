@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import styles from "./card-weather.module.css";
 import {Modal} from "../modal/modal";
+import {dayOfWeek} from "../../../constants";
 
 interface Props {
     country: string,
@@ -13,17 +14,8 @@ export const CardWeather: React.FC<Props> = ({country, city, data}): JSX.Element
     const icon = data.weather[0].icon + '@2x.png'
     const today = new Date().toLocaleDateString() === new Date(data.dt * 1000).toLocaleDateString()
     const date = new Date(data.dt * 1000)
-    const symbol = Number(data.temp.day) > 0 && '+'
+    const symbol = Number(data.temp.day) > 0 ? '+' : ''
     const temperature = Math.round(Number(data.temp.day))
-    const dayOfWeek = [
-        'Воскресенье',
-        'Понедельник',
-        'Вторник',
-        'Среда',
-        'Четверг',
-        'Пятница',
-        'Суббота'
-    ]
 
     const toggleModal = () => setModal(!showModal)
 

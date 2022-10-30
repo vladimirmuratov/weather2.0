@@ -23,6 +23,10 @@ export const MineBlock = (): JSX.Element => {
         getData()
     }
 
+    const getBgColor = useCallback((city: string, c: string) => {
+        return city.split(' ').pop()?.toLowerCase() === c ? "blue" : "#757575"
+    }, [])
+
     const getData = useCallback(async (defaultCity = "Moscow") => {
         try {
             setLoading(true)
@@ -105,11 +109,11 @@ export const MineBlock = (): JSX.Element => {
                         ? (
                             <div className={styles.cities_block}>
                                 <div className={styles.cities_container}>
-                                    {cities.map((city, index) => <CityButton
+                                    {cities.map((c, index) => <CityButton
                                             key={index}
-                                            bgColor="#757575"
-                                            text={city}
-                                            onClick={() => getData(city)}
+                                            bgColor={getBgColor(resCity, c)}
+                                            text={c}
+                                            onClick={() => getData(c)}
                                         />
                                     )}
                                 </div>

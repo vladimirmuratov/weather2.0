@@ -7,8 +7,7 @@ interface Props {
     onClick: () => void
 }
 
-export const CityButton: React.FC<Props> = ({bgColor, text, onClick}): JSX.Element => {
-    return (
+export const CityButton: React.FC<Props> = ({bgColor, text, onClick}): JSX.Element => (
         <span
             style={{backgroundColor: `${bgColor}`}}
             className={styles.button}
@@ -16,5 +15,4 @@ export const CityButton: React.FC<Props> = ({bgColor, text, onClick}): JSX.Eleme
         >
             {text}
         </span>
-    )
-}
+)
