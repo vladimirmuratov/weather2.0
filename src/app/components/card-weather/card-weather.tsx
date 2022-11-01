@@ -22,7 +22,7 @@ export const CardWeather: React.FC<Props> = ({country, city, data}): JSX.Element
     return (
         <div className={styles.cardWeather_container}>
             <div className={styles.cardWeather_image_block}>
-                <img src={`http://openweathermap.org/img/wn/${icon}`} alt="img"/>
+                <img src={`https://openweathermap.org/img/wn/${icon}`} alt="img"/>
             </div>
             <div className={styles.cardWeather_content_block}>
                 <div className={styles.cardWeather_date} style={today ? {color: 'red'} : {}}>
